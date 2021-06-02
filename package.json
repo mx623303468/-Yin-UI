@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "website-dev": "webpack serve --config ./website/webpack.config.js"
+    "website-dev": "webpack serve --config ./website/webpack.config.js",
+    "build:umd": "webpack --config ./builds/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
