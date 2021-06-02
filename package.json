@@ -6,12 +6,15 @@
   ],
   "scripts": {
     "website-dev": "webpack serve --config ./website/webpack.config.js",
-    "build:umd": "webpack --config ./builds/webpack.config.js"
+    "build:umd": "webpack --config ./builds/webpack.config.js",
+    "build:esm": "rollup -c ./builds/rollup.config.esm.js",
+    "build:esmas": "rollup -c ./builds/rollup.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "@babel/preset-typescript": "^7.13.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
     "@vue/compiler-sfc": "^3.0.11",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
@@ -19,6 +22,9 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "lerna": "^4.0.0",
+    "rollup": "^2.50.5",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.34.0",
     "sass-loader": "^12.0.0",
     "style-loader": "^2.0.0",
